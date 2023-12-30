@@ -6,8 +6,9 @@ import Link from "next/link";
 
 export default function Page() {
   const { rive, RiveComponent } = useRive({
-    src: "beavergame.riv",
-    stateMachines: "State Machine 1",
+    src: "followpathconstraint.riv",
+    artboard: "artboard",
+    animations: "movement",
     autoplay: true,
   });
 
@@ -16,7 +17,7 @@ export default function Page() {
       <Link className={linkStyle} href="/">
         Home
       </Link>
-      <RiveComponent className="h-[100vh] w-[100vw]" />
+      <Rive src="/followpathconstraint.riv" className="h-[100vh] w-[100vw]" />
     </div>
   );
 }

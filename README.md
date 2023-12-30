@@ -16,3 +16,32 @@ This repository contains samples built with Next.js, showcasing the integration 
    git clone https://github.com/your-username/rive-samples.git
    cd rive-samples
    ```
+
+2. **Install Dependencies:**
+
+```bash
+yarn install
+```
+
+3. **Run the Dev server:**
+
+```bash
+yarn dev
+```
+
+## To Be Added
+
+- [x] Blend States (blendstate)
+- [x] Input number (blendstatescroll)
+- [x] Follow Path Constraint
+- [ ] Hit Boxes
+- [ ] Joysticks
+- [ ] Rotation Constraint
+- [ ] Dynamic Text
+- [ ] State Machine Setups
+- [ ] Mouse Tracking
+- [ ] Events (active sounds or UI changes)
+- [ ] Google Analytics on React and React Native runtime (test them)
+- [ ] Image Manipulation
+- [ ] Looping Effects
+- [ ] Clipping

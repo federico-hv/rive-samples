@@ -1,10 +1,10 @@
 "use client";
 
+import { linkStyle } from "@/helpers/consts";
 import Rive, { useRive } from "@rive-app/react-canvas";
 import Link from "next/link";
-import { linkStyle } from "../page";
 
-export default function () {
+export default function Page() {
   const { rive, RiveComponent } = useRive({
     src: "blendstate.riv",
     stateMachines: "State Machine 1",
