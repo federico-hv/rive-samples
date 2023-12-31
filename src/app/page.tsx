@@ -28,6 +28,9 @@ export default function Page() {
       <Link className={linkStyle} href="/events">
         events
       </Link>
+      <Link className={linkStyle} href="/joysticks">
+        joysticks
+      </Link>
     </main>
   );
 }

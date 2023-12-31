@@ -35,8 +35,8 @@ yarn dev
 - [x] Input number (blendstatescroll)
 - [x] Follow Path Constraint
 - [x] Events (active sounds or UI changes)
+- [x] Joysticks
 - [ ] Hit Boxes
-- [ ] Joysticks
 - [ ] Rotation Constraint
 - [ ] Dynamic Text
 - [ ] State Machine Setups
@@ -48,3 +48,7 @@ yarn dev
 - [ ] Meshes
 - [ ] Clipping
 - [ ] Trim Path
+- [ ] Image Swap at runtime
+- [ ] Item moving randomly from data passed on runtime (Kill the bugs)
+- [ ] Items growing when clicked (Find Hidden Items)
+- [ ] Select the right option (text and images)
