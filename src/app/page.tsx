@@ -1,8 +1,10 @@
+"use client";
+
 import { linkStyle } from "@/helpers/consts";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="flex flex-col h-[100vh]">
       <Link className={linkStyle} href="/blendstate">
@@ -22,6 +24,9 @@ export default function Home() {
       </Link>
       <Link className={linkStyle} href="/starball">
         starball
+      </Link>
+      <Link className={linkStyle} href="/events">
+        events
       </Link>
     </main>
   );

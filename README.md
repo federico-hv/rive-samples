@@ -34,14 +34,17 @@ yarn dev
 - [x] Blend States (blendstate)
 - [x] Input number (blendstatescroll)
 - [x] Follow Path Constraint
+- [x] Events (active sounds or UI changes)
 - [ ] Hit Boxes
 - [ ] Joysticks
 - [ ] Rotation Constraint
 - [ ] Dynamic Text
 - [ ] State Machine Setups
 - [ ] Mouse Tracking
-- [ ] Events (active sounds or UI changes)
 - [ ] Google Analytics on React and React Native runtime (test them)
 - [ ] Image Manipulation
 - [ ] Looping Effects
+- [ ] Bones
+- [ ] Meshes
 - [ ] Clipping
+- [ ] Trim Path
