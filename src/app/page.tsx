@@ -31,6 +31,12 @@ export default function Page() {
       <Link className={linkStyle} href="/joysticks">
         joysticks
       </Link>
+      <Link className={linkStyle} href="/outofbandassets">
+        outofbandassets
+      </Link>
+      <Link className={linkStyle} href="/rotationconstraint">
+        rotationconstraint
+      </Link>
     </main>
   );
 }

@@ -36,13 +36,16 @@ yarn dev
 - [x] Follow Path Constraint
 - [x] Events (active sounds or UI changes)
 - [x] Joysticks
-- [ ] Hit Boxes
+- [x] Out of Band Assets (images)
 - [ ] Rotation Constraint
+- [ ] Hit Boxes (drag and drop)
+- [ ] Joysticks controlled at runtime
+- [ ] Joysticks with solos (frame by frame effects)
+- [ ] More input numbers for data-viz
 - [ ] Dynamic Text
 - [ ] State Machine Setups
 - [ ] Mouse Tracking
 - [ ] Google Analytics on React and React Native runtime (test them)
-- [ ] Image Manipulation
 - [ ] Looping Effects
 - [ ] Bones
 - [ ] Meshes
