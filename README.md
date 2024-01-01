@@ -37,7 +37,7 @@ yarn dev
 - [x] Events (active sounds or UI changes)
 - [x] Joysticks
 - [x] Out of Band Assets (images)
-- [ ] Rotation Constraint
+- [x] Rotation Constraint
 - [ ] Hit Boxes (drag and drop)
 - [ ] Joysticks controlled at runtime
 - [ ] Joysticks with solos (frame by frame effects)

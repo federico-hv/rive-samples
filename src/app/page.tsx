@@ -31,11 +31,17 @@ export default function Page() {
       <Link className={linkStyle} href="/joysticks">
         joysticks
       </Link>
+      <Link className={linkStyle} href="/controlledjoysticks">
+        controlledjoysticks
+      </Link>
       <Link className={linkStyle} href="/outofbandassets">
         outofbandassets
       </Link>
       <Link className={linkStyle} href="/rotationconstraint">
         rotationconstraint
+      </Link>
+      <Link className={linkStyle} href="/slider">
+        slider
       </Link>
     </main>
   );
