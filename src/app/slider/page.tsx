@@ -6,6 +6,7 @@ import Rive, {
   RiveEventType,
   useRive,
   Event,
+  useStateMachineInput,
 } from "@rive-app/react-canvas";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -14,27 +15,11 @@ export default function Page() {
   const { rive, RiveComponent } = useRive({
     src: "slider.riv",
     stateMachines: "State Machine 1",
+    // animations: "verticalKnob",
+    artboard: "main",
+    onLoad: () => changeBackgroundColor(0),
     autoplay: true,
   });
-
-  // const playSound = (soundName: string) => {
-  //   try {
-  //     console.log("PLAYING");
-  //     const audio = new Audio(`/sounds/${soundName}.wav`);
-  //     // LOOP LOGIC
-  //     // audio.addEventListener(
-  //     //   "ended",
-  //     //   function () {
-  //     //     this.currentTime = 0;
-  //     //     this.play();
-  //     //   },
-  //     //   false
-  //     // );
-  //     audio && audio.play();
-  //   } catch (err) {
-  //     console.log("ERROR PLAYING MUSIC: ", err);
-  //   }
-  // };
 
   const onRiveEventReceived = (riveEvent: any) => {
     const eventData = riveEvent.data;
@@ -52,31 +37,51 @@ export default function Page() {
     }
   };
 
+  let verticalAmount = useStateMachineInput(
+    rive,
+    "State Machine 1",
+    "verticalAmount"
+  );
+
   useEffect(() => {
-    if (rive) {
-      rive.on(EventType.RiveEvent, onRiveEventReceived);
+    if (rive && verticalAmount != null) {
+      // rive.on(EventType.RiveEvent, onRiveEventReceived);
+
+      rive.on(EventType.StateChange, (event: Event) => {
+        console.log("CHANGED: ", verticalAmount!.value);
+        changeBackgroundColor(verticalAmount!.value as number);
+      });
     }
-  }, [rive]);
+  }, [rive, verticalAmount]);
+
+  function changeBackgroundColor(number: number) {
+    // Ensure the number is within the range of 0 to 99
+    number = Math.min(99, Math.max(0, number));
+
+    // Calculate the grayscale value based on the number
+    var grayscaleValue = Math.round((number / 99) * 255);
+
+    // Convert the grayscale value to a CSS color string
+    var colorString =
+      "rgb(" +
+      grayscaleValue +
+      "," +
+      grayscaleValue +
+      "," +
+      grayscaleValue +
+      ")";
+
+    // Set the background color of the document body
+    document.body.style.backgroundColor = colorString;
+    document.getElementById("rive-canvas")!.style.background = colorString;
+  }
 
   return (
     <div className="bg-white h-[100vh]">
       <Link className={linkStyle} href="/">
         Home
       </Link>
-      <RiveComponent className="h-[100vh] w-[100vw]" />
+      <RiveComponent id="rive-canvas" className="h-[100vh] w-[100vw]" />
     </div>
   );
 }
-
-// const { rive, RiveComponent } = useRive({
-//   src: "https://cdn.rive.app/animations/vehicles.riv",
-//   stateMachines: "bumpy",
-//   autoplay: false,
-// });
-
-// return (
-//   <RiveComponent
-//     onMouseEnter={() => rive && rive.play()}
-//     onMouseLeave={() => rive && rive.pause()}
-//   />
-// );

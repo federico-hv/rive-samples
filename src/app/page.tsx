@@ -13,6 +13,9 @@ export default function Page() {
       <Link className={linkStyle} href="/blendstatescroll">
         blendstatescroll
       </Link>
+      <Link className={linkStyle} href="/parallax">
+        parallax
+      </Link>
       <Link className={linkStyle} href="/followpathconstraint">
         followpathconstraint
       </Link>
@@ -42,6 +45,12 @@ export default function Page() {
       </Link>
       <Link className={linkStyle} href="/slider">
         slider
+      </Link>
+      <Link className={linkStyle} href="/slidercopy">
+        slidercopy
+      </Link>
+      <Link className={linkStyle} href="/animationevents">
+        animationevents
       </Link>
     </main>
   );
