@@ -38,11 +38,13 @@ yarn dev
 - [x] Joysticks
 - [x] Out of Band Assets (images)
 - [x] Rotation Constraint
-- [ ] Hit Boxes (drag and drop)
+- [x] Rive Audio
+- [ ] Dynamic Text
 - [ ] Joysticks controlled at runtime
+- [ ] Hit Boxes (drag and drop)
 - [ ] Joysticks with solos (frame by frame effects)
 - [ ] More input numbers for data-viz
-- [ ] Dynamic Text
+
 - [ ] State Machine Setups
 - [ ] Mouse Tracking
 - [ ] Google Analytics on React and React Native runtime (test them)

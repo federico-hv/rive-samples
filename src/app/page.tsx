@@ -7,12 +7,18 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="flex flex-col h-[100vh]">
+      <Link className={linkStyle} href="/audio">
+        audio
+      </Link>
       <Link className={linkStyle} href="/blendstate">
         blendstate
       </Link>
       <Link className={linkStyle} href="/blendstatescroll">
         blendstatescroll
       </Link>
+      {/* <Link className={linkStyle} href="/dynamictext">
+        dynamictext
+      </Link> */}
       <Link className={linkStyle} href="/parallax">
         parallax
       </Link>
