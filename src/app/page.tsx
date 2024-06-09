@@ -7,6 +7,9 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="flex flex-col h-[100vh]">
+      <Link className={linkStyle} href="/asyncdata">
+        async data
+      </Link>
       <Link className={linkStyle} href="/audio">
         audio
       </Link>

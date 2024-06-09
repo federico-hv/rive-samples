@@ -1,0 +1,29 @@
+# https://docs.digitalocean.com/products/app-platform/reference/app-spec/
+name: rive-samples-app
+region: tor1
+services:
+  - name: rive-samples
+    github:
+      branch: master
+      deploy_on_push: true
+      repo: federico-hv/rive-samples
+    run_command: yarn start
+    build_command: yarn build
+    environment_slug: node-js
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
+
+  # - name: internal-service
+  #   github:
+  #     branch: master
+  #     deploy_on_push: true
+  #     repo: federico-hv/express-simple-api
+  #   run_command: yarn start
+  #   build_command: yarn install
+  #   environment_slug: node-js
+  #   instance_count: 1
+  #   instance_size_slug: basic-xxs
+  #   internal_ports:
+  #     - 80
